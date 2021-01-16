@@ -17,12 +17,12 @@ class CreateTblShopsTable extends Migration
             $table->increments('id');
             $table->integer('user_id');
             $table->string('name');
-            $table->string('description');
-            $table->string('expire_at');
-            $table->date('active_at');
-            $table->integer('package');
-            $table->integer('user_count_number');
-            $table->text('message');
+            $table->string('description')->nullable();
+            $table->string('expire_at')->nullable();
+            $table->date('active_at')->nullable();
+            $table->integer('package')->nullable();
+            $table->integer('user_count_number')->nullable();
+            $table->text('message')->nullable();
             $table->timestamps();
         });
     }
