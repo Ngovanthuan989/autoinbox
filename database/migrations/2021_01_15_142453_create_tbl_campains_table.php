@@ -18,7 +18,7 @@ class CreateTblCampainsTable extends Migration
             $table->integer('shop_id');
             $table->integer('fanpage_id');
             $table->string('campain_name');
-            $table->string('campain_description');
+            $table->string('campain_description')->nullable();
             $table->string('user_id');
             $table->string('date');
             $table->timestamps();

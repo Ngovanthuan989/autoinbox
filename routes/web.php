@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['namespace'=>'Site'] ,function() {
+    Route::get('/login-facebook', 'LoginController@loginFacebook')->name('login_facebook');
+
+    Route::post('/login', 'LoginController@login')->name('login');
+    Route::post('/login', 'LoginController@register')->name('regitser');
+
+    // Route::group(['namespace'=>'Site', 'middleware' => ['admin']] ,function() {
+    Route::get('/dashboard', 'HomeController@index');
+});
