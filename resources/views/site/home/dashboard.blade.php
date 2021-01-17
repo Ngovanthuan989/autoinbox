@@ -3,7 +3,6 @@
 @section('content')
 <div class="wrapper">
 <section class="container mt-5" id="send-page">
-
 @include('site.home.login')
     <div class="row">
         <div id="header" class="container m-auto text-center" style="margin: 30px auto!important;">

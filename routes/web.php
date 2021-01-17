@@ -19,8 +19,8 @@ Route::get('/', function () {
 Route::group(['namespace'=>'Site'] ,function() {
     Route::get('/login-facebook', 'LoginController@loginFacebook')->name('login_facebook');
 
-    Route::post('/login', 'LoginController@login')->name('login');
-    Route::post('/login', 'LoginController@register')->name('regitser');
+    Route::post('/login', 'LoginController@login')->name('login_site');
+    Route::post('/register', 'LoginController@register')->name('regitser');
 
     // Route::group(['namespace'=>'Site', 'middleware' => ['admin']] ,function() {
     Route::get('/dashboard', 'HomeController@index');

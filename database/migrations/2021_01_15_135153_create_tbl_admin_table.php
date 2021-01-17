@@ -19,6 +19,7 @@ class CreateTblAdminTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone');
+            $table->string('remember_token')->nullable();
             $table->string('token')->nullable();
             $table->string('note')->nullable();
             $table->string('facebook_id')->nullable();
