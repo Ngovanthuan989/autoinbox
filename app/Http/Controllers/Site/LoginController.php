@@ -12,6 +12,7 @@ use App\Http\Requests\Login\RegisterRequest;
 class LoginController extends Controller
 {
     public function login(Request $request){
+<<<<<<< HEAD
         $user = User::where('email', $request['email'])
         ->first();
         if($user){
@@ -23,6 +24,9 @@ class LoginController extends Controller
         }
         
         return redirect('/')->with('error-login', 'Email Hoặc mật khẩu không chính xác!');
+=======
+
+>>>>>>> dcaf6e5a2d4cfefce7bb1f1b5acf5dffbc3b11ff
     }
 
     public function register(RegisterRequest $request){
