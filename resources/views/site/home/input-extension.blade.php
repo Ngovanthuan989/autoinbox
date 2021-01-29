@@ -1,0 +1,1 @@
+<input type="hidden" value="{{ Auth::user()->id }}" name="user_id_extenson">

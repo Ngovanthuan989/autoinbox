@@ -29,54 +29,79 @@
     <!-- Site favicon -->
     <link rel="shortcut icon" href="{{ asset('public/assets/favicon.png')}}">
 	<!--link rel="icon" href="{{ asset('public/assets/favicon.png')}}" type="image/gif" sizes="16x16"-->
+	<meta charset="utf-8">
 
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="{{ asset('public/assets/base/css/bootstrap.min.css')}}" type="text/css">
-	    <link rel="stylesheet" href="{{ asset('public/css/AdminLTE.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/css/SkinLte.css')}}">
-    <link rel="stylesheet" href="{{ asset('public/assets/base/css/style-base.css')}}"/>
-    <!-- Css font size-->
-    <link rel="stylesheet" href="{{ asset('public/assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
-    <!--    <link rel="stylesheet" href="assets/fonts/fontawesome-pro-5.14.0-web/css/all.min.css">-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
-    <!--CSS develop-->
-    <link rel="stylesheet" href="{{ asset('public/assets/develop/css/style-develop.css')}}"/>
-    <link rel="stylesheet" href="{{ asset('public/assets/base/WOW-master/css/libs/animate.css')}}">
-    <meta name="csrf-token" value="{{ csrf_token() }}" />
-	
-	<script src="{{ asset('public/assets/base/js/jquery.min.js')}}"></script>
-	<script src="{{ asset('public/assets/base/js/cookie-jquery.js')}}"></script>
-	<script src="{{ asset('public/assets/base/js/popper.min.js')}}"></script>
-	<script src="{{ asset('public/assets/base/js/bootstrap.min.js')}}"></script>
-	<script src="{{ asset('public/assets/base/js/jquery.easing.min.js')}}"></script>
-	<!-- <script src="/assets/landing/js/scrollspy.min.js"></script>-->
-
-	<!-- Owl Js -->
-	<script src="{{ asset('public/assets/base/js/owl.carousel.min.js')}}"></script>
-
-	<!-- Particles Js -->
-	<script src="{{ asset('public/assets/base/js/particles.js')}}"></script>
-	<script src="{{ asset('public/assets/base/js/particles.app.js')}}"></script>
-
-	<!-- MFP JS -->
-	<script src="{{ asset('public/assets/base/js/jquery.magnific-popup.min.js')}}"></script>
-
-	<!-- Custom Js   -->
-	<script src="{{ asset('public/assets/base/js/custom.js')}}"></script>
-	<script src="{{ asset('public/assets/base/WOW-master/dist/wow.js')}}"></script>
-	
-    <!-- Google Tag Manager -->
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/fontawesome-free/css/all.min.css') }}">
+	<!-- Ionicons -->
+	<link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+	<!-- Tempusdominus Bbootstrap 4 -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css') }}">
+	<!-- iCheck -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
+	<!-- JQVMap -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/jqvmap/jqvmap.min.css') }}">
+	<!-- Theme style -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/dist/css/adminlte.min.css') }}">
+	<!-- overlayScrollbars -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css') }}">
+	<!-- Daterange picker -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/daterangepicker/daterangepicker.css') }}">
+	<!-- summernote -->
+	<link rel="stylesheet" href="{{ asset('public/AdminLTE/plugins/summernote/summernote-bs4.css') }}">
+	<!-- Google Font: Source Sans Pro -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+		
+	<!-- jQuery -->
+	<script src="{{ asset('public/AdminLTE/plugins/jquery/jquery.min.js') }}"></script>
+	<!-- jQuery UI 1.11.4 -->
+	<script src="{{ asset('public/AdminLTE/plugins/jquery-ui/jquery-ui.min.js') }}"></script>
+	<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+	<script>
+	$.widget.bridge('uibutton', $.ui.button)
+	</script>
+	<!-- Bootstrap 4 -->
+	<script src="{{ asset('public/AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+	<!-- ChartJS -->
+	<script src="{{ asset('public/AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
+	<!-- Sparkline -->
+	<script src="{{ asset('public/AdminLTE/plugins/sparklines/sparkline.js') }}"></script>
+	<!-- JQVMap -->
+	<script src="{{ asset('public/AdminLTE/plugins/jqvmap/jquery.vmap.min.js') }}"></script>
+	<script src="{{ asset('public/AdminLTE/plugins/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
+	<!-- jQuery Knob Chart -->
+	<script src="{{ asset('public/AdminLTE/plugins/jquery-knob/jquery.knob.min.js') }}"></script>
+	<!-- daterangepicker -->
+	<script src="{{ asset('public/AdminLTE/plugins/moment/moment.min.js') }}"></script>
+	<script src="{{ asset('public/AdminLTE/plugins/daterangepicker/daterangepicker.js') }}"></script>
+	<!-- Tempusdominus Bootstrap 4 -->
+	<script src="{{ asset('public/AdminLTE/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js') }}"></script>
+	<!-- Summernote -->
+	<script src="{{ asset('public/AdminLTE/plugins/summernote/summernote-bs4.min.js') }}"></script>
+	<!-- overlayScrollbars -->
+	<script src="{{ asset('public/AdminLTE/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js') }}"></script>
+	<!-- AdminLTE App -->
+	<script src="{{ asset('public/AdminLTE/dist/js/adminlte.js') }}"></script>
+	<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+	<script src="{{ asset('public/AdminLTE/dist/js/pages/dashboard.js') }}"></script>
+	<!-- AdminLTE for demo purposes -->
+	<script src="{{ asset('public/AdminLTE/dist/js/demo.js') }}"></script>
+	<!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NVW6BPX');</script>
     <!-- End Google Tag Manager -->
-    </script>
+	</script>
+	<style>
+		.content-wrapper{
+			background: #fff;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	</style>
 </head>
-
 <body>
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NVW6BPX"
@@ -172,26 +197,14 @@
 	    {{--else{--}}
 	    {{--}--}}
 	{{--</script>--}}
-@yield('content')
-  
 
-<script>
-    wow = new WOW(
-        {
-            animateClass: 'animated',
-            offset: 100,
-            callback: function (box) {
-                console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
-            }
-        }
-    );
-    wow.init();
-    document.getElementById('moar').onclick = function () {
-        var section = document.createElement('section');
-        section.className = 'section--purple wow fadeInDown';
-        this.parentNode.insertBefore(section, this);
-    };
-</script>
+<div class="wrapper">
+	@include('site.master.nav')
+	@include('site.master.siderbar')
+	<div class="content-wrapper">
+		@yield('content')
+	</div>
+</div>
     <div class="fb-customerchat" page_id="106110771355324"></div>
 </body>
 </html>

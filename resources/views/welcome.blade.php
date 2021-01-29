@@ -86,8 +86,8 @@
                             Gửi tin nhắn hàng loạt cho khách cũ trên FANPAGE với nội dung chứa quảng cáo kèm ảnh, Link!
                             
                             <div class="header-button">
-                                <a href="" rel="nofollow"
-                                    class="btn btn-border-filled">Sử dụng ngay</a>
+                                @include('site.home.login')
+
                                 <a href="#contact" class="btn btn-border page-scroll">Contact Us</a>
                             </div>
                         </div>

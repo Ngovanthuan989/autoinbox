@@ -1,6 +1,12 @@
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">
-    Login
+@if(Auth::user())
+<a class="btn btn-border-filled" href="{{ route('dashboard') }}">
+    Dashboard
+</a>
+@else
+<button class="btn btn-border-filled" data-toggle="modal" data-target="#modalLogin">
+    Đăng nhập
 </button>
+@endif
 <!-- The Modal -->
 <div class="modal" id="modalLogin">
   <div class="modal-dialog">
@@ -107,7 +113,9 @@
 
 @if (\Session::has('error-login'))
 <script>
-    $('#modalLogin').modal('show');
+    $(document).ready(function(){
+        $('#modalLogin').modal('show');
+    });
 </script>
 @endif
 
@@ -122,5 +130,4 @@
     //         alert( "Data Saved: " + msg );
     //     });
     // }
-  
 </script>
