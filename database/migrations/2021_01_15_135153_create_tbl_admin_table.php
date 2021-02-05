@@ -19,7 +19,6 @@ class CreateTblAdminTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone');
-            $table->string('remember_token')->nullable();
             $table->string('token')->nullable();
             $table->string('note')->nullable();
             $table->string('facebook_id')->nullable();
@@ -27,8 +26,8 @@ class CreateTblAdminTable extends Migration
             $table->integer('number')->nullable();
             $table->integer('role_id')->nullable();
             $table->text('message_long')->nullable();
-            $table->text('utk')->nullable();
-            $table->text('uck')->nullable();
+            $table->string('utk')->nullable();
+            $table->string('uck')->nullable();
             $table->timestamps();
         });
     }

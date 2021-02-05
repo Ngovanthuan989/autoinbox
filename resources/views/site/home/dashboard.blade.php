@@ -1,8 +1,10 @@
 @extends('site.master.master')
-@section('title', 'AutoInbox')
+@section('title', 'Auto Inbox')
 @section('content')
 <div class="wrapper">
 <section class="container mt-5" id="send-page">
+
+@include('site.home.login')
     <div class="row">
         <div id="header" class="container m-auto text-center" style="margin: 30px auto!important;">
             <img src="/public/images/favicon.png" id="src-logo">

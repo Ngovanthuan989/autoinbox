@@ -16,13 +16,11 @@ class CreateTblFanpageTable extends Migration
         Schema::create('fanpage', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('user_id');
-            $table->string('fanpage_id');
+            $table->integer('fanpage_id');
             $table->string('fanpage_name');
             $table->string('fanpage_id_token');
-            $table->string('fanpage_id_career')->nullable();
-            $table->text('fanpage_user')->nullable();
-            $table->text('page_about')->nullable();
-            $table->integer('status')->nullable()->default(0);
+            $table->string('fanpage_id_career');
+            $table->text('fanpage_user');
             $table->timestamps();
         });
     }

@@ -1,12 +1,6 @@
-@if(Auth::user())
-<a class="btn btn-border-filled" href="{{ route('dashboard') }}">
-    Dashboard
-</a>
-@else
-<button class="btn btn-border-filled" data-toggle="modal" data-target="#modalLogin">
-    Đăng nhập
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalLogin">
+    Login
 </button>
-@endif
 <!-- The Modal -->
 <div class="modal" id="modalLogin">
   <div class="modal-dialog">
@@ -28,8 +22,7 @@
         <div class="tab-content" id="myTabContent">
             <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
                 <div id="login-box" class="col-md-12">
-                    <form id="login-form" class="form" action="{{route('login_site')}}" method="post">
-                        @csrf
+                    <form id="login-form" class="form" action="" method="post">
                         <div class="head mt-2 text-center">
                             <img src="/public/images/favicon.png" width="50px" id="src-logo">
                             <h3 class="text-primary">Đăng nhập</h3>
@@ -40,12 +33,7 @@
                         </div>
                         <div class="form-group">
                             <label for="password" class="text-info">Mật khẩu:</label><br>
-                            <input type="password" name="password" id="password" class="form-control" required>
-                        </div>
-                        <div>
-                        @if (\Session::has('error-login'))
-                        <p class="text-danger">{{\Session::get('error-login')}}</p>
-                        @endif
+                            <input type="text" name="password" id="password" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <input type="submit" name="submit" class="btn btn-info btn-md" value="submit">
@@ -63,21 +51,21 @@
                         </div>
                         <div class="form-group">
                             <label for="name" class="text-info">Họ tên :</label><br>
-                            <input type="text" name="name" id="name" class="form-control" value="{{old('name')}}" required>
+                            <input type="text" name="name" id="name" class="form-control" required>
                             @if ($errors->has('name'))
                                 <p class="text-danger">{{$errors->first('name')}}</p>
                             @endif
                         </div>
                         <div class="form-group">
                             <label for="email" class="text-info">Email:</label><br>
-                            <input type="text" name="email" id="email" class="form-control" value="{{old('email')}}"  required>
+                            <input type="text" name="email" id="email" class="form-control" required>
                             @if ($errors->has('email'))
                             <p class="text-danger">{{$errors->first('email')}}</p>
                             @endif
                         </div>
                         <div class="form-group">
                             <label for="phone" class="text-info">Số điện thoại:</label><br>
-                            <input type="text" name="phone" id="phone" class="form-control" value="{{old('phone')}}"  required>
+                            <input type="text" name="phone" id="phone" class="form-control" required>
                             @if ($errors->has('phone'))
                             <p class="text-danger">{{$errors->first('phone')}}</p>
                             @endif
@@ -101,24 +89,7 @@
     </div>
   </div>
 </div>
-@if ($errors->any())
-<script>
-    $('#modalLogin').modal('show');
-    $('#register-tab').addClass('active');
-    $('#login-tab').removeClass('active');
-    $('#login').removeClass(' show active');
-    $('#register').addClass(' show active');
-</script>
-@endif
-
-@if (\Session::has('error-login'))
-<script>
-    $(document).ready(function(){
-        $('#modalLogin').modal('show');
-    });
-</script>
-@endif
-
+{{ $errors }}
 <script>
     // function register(){
     //     $.ajax({
@@ -130,4 +101,5 @@
     //         alert( "Data Saved: " + msg );
     //     });
     // }
+  
 </script>
